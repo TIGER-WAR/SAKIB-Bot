@@ -48,33 +48,33 @@ module.exports.run = async function({ api, event, Users }) {
   if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
     //api.changeNickname(`𝗕𝗢𝗧 ${(!global.config.BOTNAME) ? "Buddy" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 
-    let gifUrl = 'https://i.postimg.cc/SNQXkB0y/lv-0-20231018174834.gif';
+    let gifUrl = 'https://i.postimg.cc/J06H3Wbx/icegif-461.gif';
 let gifPath = __dirname + '/Nayan/join/join.gif';
 
 axios.get(gifUrl, { responseType: 'arraybuffer' })
 .then(response => {
     fs.writeFileSync(gifPath, response.data);
   if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
-    api.changeNickname(`[ ${global.config.PREFIX} ] • ➠${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-    return api.sendMessage("চলে এসেছি আমি পিচ্চি নয়ন তোমাদের মাঝে🤭!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
+    api.changeNickname(`➠${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
+    return api.sendMessage("চলে এসেছি আমি সাকিব তোমাদের মাঝে🤭!", event.threadID, () => api.sendMessage({ body: `${global.config.BOTNAME} CONNECTED«\n\nAssalamualaykum☘️
 <------------------------------>  
-BOT CONNECTED SUCCESFUL !!! 
+𝐁𝐎𝐓 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 𝐒𝐔𝐂𝐂𝐄𝐒𝐅𝐔𝐋 !!! 
 
-APPROVAL ALLOW IN THIS GROUP!!!
+𝐀𝐏𝐏𝐑𝐎𝐕𝐀𝐋 𝐀𝐋𝐋𝐎𝐖 𝐈𝐍 𝐓𝐇𝐈𝐒 𝐆𝐑𝐎𝐔𝐏!!!
 <------------------------------>\n\nTO VIEW ANY COMMAND Use👉${global.config.PREFIX}help\nSee command👉 ${global.config.PREFIX}command
 \n\EXAMPLE:👇\n${global.config.PREFIX}admin (information)\n${global.config.PREFIX}islam (video)\n${global.config.PREFIX}tik (link)\n${global.config.PREFIX}fbvideo (link)
 <------------------------------>
 AND FOR ANY COMPLAINTS OR CONTACT BOT OPERATOR 
 
-DEVELOPER :Mohammad Nayan 
+𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 : 𝐌𝐃. 𝐒𝐀𝐊𝐈𝐁 𝐇𝐎𝐒𝐄𝐍
 
-🟣Facebook Account Link: 
+𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊 𝐈𝐃 𝐋𝐈𝐍𝐊 :
 
-https://www.facebook.com/www.xnxx.com169
+𝐡𝐭𝐭𝐩𝐬://𝐰𝐰𝐰.𝐟𝐚𝐜𝐞𝐛𝐨𝐨𝐤.𝐜𝐨𝐦/𝐒𝐚𝐤𝐢𝐛.𝐁𝐡𝐚𝐢.𝟒𝐱"
 
-🔵WHATSAPP NUMBER: wa.me/+8801615298449
+𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐍𝐔𝐌𝐁𝐄𝐑 : 𝟎𝟏𝟕𝟔𝟓𝟎𝟓𝟏𝟐𝟏𝟗
 
-🟢SUPPORT EMAIL: www.mdmnnm2004@gmail.com`, attachment: fs.createReadStream(gifPath)}, threadID));
+𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐄𝐌𝐀𝐈𝐋 : 𝐭𝐨𝐫𝐛𝐚𝐩𝐬𝐚𝐤𝐢𝐛@𝐠𝐦𝐚𝐢𝐥.𝐜𝐨𝐦`, attachment: fs.createReadStream(gifPath)}, threadID));
   }})
 .catch(error => {
     console.error(error);
